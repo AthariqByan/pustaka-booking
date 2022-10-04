@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()
-?>assets/css/stylebuku.css">
+?>assets1/css/stylebuku.css">
 
 <section>
                <h1><?php echo $judul ?></h1>

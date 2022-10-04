@@ -3,7 +3,7 @@
      <h4>Nama</h4>
      <ul type="disc">
           <li>Nama Depan : Athariq Byan</li>
-          <li>Nama Belakang : fadhlan Santoso</li>
+          <li>Nama Belakang : Fadhlan Santoso</li>
      </ul>
      <br>
      <h4>Alamat</h4>

@@ -12,7 +12,11 @@ class Latihan1 extends CI_Controller{
 
      public function index()
      {
-          echo "Lorem ipsum dolorem amet";
+          //echo "Lorem ipsum dolorem amet";
+          $this->load->view('templates/header');
+          $this->load->view('templates/sidebar');
+          $this->load->view('templates/topbar');
+          $this->load->view('templates/footer');
      }
 
      public function penjumlahan ($n1, $n2)
