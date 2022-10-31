@@ -6,9 +6,9 @@
 
 <body>
     <center>
-    <div class="row">
+    <div class="container" style="margin-top: 80px">
         <div class="col-md-20">
-            <div class="p-5">
+            <div class="mb-3">
                 <form action="<?= base_url('siswa/simpanDataMahasiswa'); ?>" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control form-control-user" id="nama" placeholder="Nama" name="nama">
@@ -52,10 +52,12 @@
                         <input type="radio" name="jnskel" value="Perempuan"> Perempuan</div>
                     </div>
                     <div class="modal-footer">
+                    <button type="reset" class="btn btn-warning">RESET</button>
                         <button type="submit" class="btn btn-primary"><i class="fas fa-plus-circle"></i> Tambah</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <center>
 </body>

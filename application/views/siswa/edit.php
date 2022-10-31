@@ -1,8 +1,8 @@
-<div class="container">
-  <div class="col-lg-8">
-  <form action="<?= base_url('siswa/editDataSiswa')?>" method="post">
-  <input type="hidden" value="<?= $siswa['id']?>" name="id">
-  <div class="mb-3">
+<div class="container" style="margin-top: 80px">
+  <div class="col-md-12">
+    <form action="<?= base_url('siswa/editDataSiswa')?>" method="post">
+    <input type="hidden" value="<?= $siswa['id']?>" name="id">
+    <div class="mb-3">
     <label for="nama" class="form-label">Nama</label>
     <input value="<?= $siswa['nama']?>" type="text" class="form-control"  id="nama" name="nama" require>
     <div id="nama" class="form-text"></div>
