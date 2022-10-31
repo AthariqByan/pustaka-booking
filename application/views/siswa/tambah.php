@@ -7,9 +7,9 @@
 <body>
     <center>
     <div class="row">
-        <div class="col-lg-7">
+        <div class="col-md-20">
             <div class="p-5">
-                <form action="<?= base_url('datasiswa/cetak'); ?>" method="post">
+                <form action="<?= base_url('siswa/simpanDataMahasiswa'); ?>" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control form-control-user" id="nama" placeholder="Nama" name="nama">
                         <?= form_error('nama','<small class="text-danger pl-3">', '</small>'); ?>
