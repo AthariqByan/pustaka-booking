@@ -46,7 +46,6 @@
         <option value="Hindu">Hindu</option>
         <option value="Protestan">Protestan</option>
         <option value="Khonghucu">Khonghucu</option>
-
     </select>
   </div>
     <div class="form-group">
