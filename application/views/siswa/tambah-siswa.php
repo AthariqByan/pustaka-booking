@@ -35,13 +35,12 @@
                 <input type="text" class="form-control" id="tmplahir" name="tmplahir">
               </div>
 
-              <!-- Membuat input jenis kelamin radio button php -->
               <div class="form-group">
-                    <input type="radio" name="jnskel" value="Laki-Laki"> Laki - Laki
-                    <input type="radio" name="jnskel" value="Perempuan"> Perempuan</div>
-               </div>
+                <label>Alamat</label>
+                <textarea class="form-control" name="alamat" placeholder="Masukkan Alamat Siswa" rows="4"></textarea>
+              </div>
 
-              <!-- Membuat input agama combo-box dengan php -->
+              <!-- Membuat input agama dengan combo-box -->
               <div class="form-group">
                 <label for="agama">Agama</label>
                 <select class="form-control" id="agama" name="agama">
@@ -55,14 +54,15 @@
                 </select>
               </div>
 
+              <!-- Membuat input jenis kelamin dengan radio button  -->
               <div class="form-group">
-                <label>Alamat</label>
-                <textarea class="form-control" name="alamat" placeholder="Masukkan Alamat Siswa" rows="4"></textarea>
+                    <input type="radio" name="jnskel" value="Laki-Laki"> Laki - Laki
+                    <input type="radio" name="jnskel" value="Perempuan"> Perempuan
               </div>
-
+            <div>
               <button type="submit" class="btn btn-success">SIMPAN</button>
               <button type="reset" class="btn btn-warning">RESET</button>
-
+            </div>
             </form>
           </div>
         </div>

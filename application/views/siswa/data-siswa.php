@@ -9,7 +9,7 @@
           DATA SISWA
         </div>
         <div class="card-body">
-          <a href="<?php echo base_url() ?>index.php/siswa/tambah" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
+          <a href="<?= echo base_url('siswa'); ?>" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
           <table class="table table-bordered" id="myTable">
             <thead>
               <tr>
