@@ -11,7 +11,6 @@ class Siswa extends CI_Controller
         $data['judul'] = "Data Siswa";
         $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
         $data['siswa'] = $this->ModelSiswa->getSiswa()->result_array();
-
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
@@ -21,8 +20,12 @@ class Siswa extends CI_Controller
 
     public function tambah()
      {
+          $data['judul'] = 'Tambah Data Siswa';
+          $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
+          $data['siswa'] = $this->ModelSiswa->getSiswa(['id' => $this->uri->segment(3)])->result_array();
           $this->load->view('templates/header');
           $this->load->view('templates/sidebar');
+          $this->load->view('templates/topbar', $data);
           $this->load->view('siswa/tambah');
           $this->load->view('templates/footer');    
      }
@@ -58,15 +61,16 @@ class Siswa extends CI_Controller
     public function edit() {
         $data['judul'] = 'Ubah Data Siswa';
         $this->load->model('ModelSiswa');
-
-        $data['siswa'] = $this->ModelSiswa->getSiswa()->result_array();
+        $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
+        $data['siswa'] = $this->ModelSiswa->getSiswa(['id' => $this->uri->segment(3)])->result_array();
         $where = ['id' => $this->uri->segment(3)];
         $data['siswa'] = $this->ModelSiswa->siswaWhere($where)->row_array();
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('templates/sidebar');
-            $this->load->view('siswa/edit');
-            $this->load->view('templates/footer');
+          $this->load->view('templates/header', $data);
+          $this->load->view('templates/sidebar', $data);
+          $this->load->view('templates/topbar', $data);
+          $this->load->view('siswa/edit', $data);
+          $this->load->view('templates/footer');
 
    }
 

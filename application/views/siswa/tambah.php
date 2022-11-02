@@ -38,7 +38,7 @@
                                         <div>
                                         <div class="form-group">
                                             <select name="agama" class="form-control form-control-user" >
-                                                <option value="">Pilih Kategori</option>
+                                                <option value="">Pilih Agama</option>
                                                 <option value="Islam">Islam</option>
                                                 <option value="Kristen">Kristen</option>
                                                 <option value="Katolik">Katolik</option>

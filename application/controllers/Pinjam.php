@@ -5,7 +5,7 @@ class Pinjam extends CI_Controller
     { 
         parent::__construct(); 
         $this->load->model(['ModelUser', 'ModelBuku', 'ModelPinjam', 'ModelBooking']); 
-        cek_login(); 
+        //cek_login(); 
         } 
         public function index() 
         { 
