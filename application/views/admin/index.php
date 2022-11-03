@@ -92,7 +92,7 @@
 
   <!-- row table-->
   <div class="row">
-    <div class="table-responsive table-bordered col-sm-5 ml-auto mr-auto mt-2">
+    <div class="table-responsive table-bordered col-sm-auto ml-auto mr-auto mt-2">
       <div class="page-header">
         <span class="fas fa-users text-primary mt-2 "> Data User</span>
         <a class="text-danger" href="<?php echo base_url('user/data_user'); ?>"><i class="fas fa-search mt-2 float-right"> Tampilkan</i></a>
@@ -126,7 +126,7 @@
     </div>
 
 
-    <div class="table-responsive table-bordered col-sm-5 ml-auto mr-auto mt-2">
+    <div class="table-responsive table-bordered col-sm-auto ml-auto mr-auto mt-2">
       <div class="page-header">
         <span class="fas fa-book text-warning mt-2"> Data Buku</span>
         <a href="<?= base_url('buku'); ?>"><i class="fas fa-search text-primary mt-2 float-right"> Tampilkan</i></a>
@@ -147,8 +147,8 @@
           <tbody>
             <?php
             $i = 1;
-            foreach ($buku as $b) { 
-              ?>
+            foreach ($buku as $b) {
+            ?>
               <tr>
                 <td><?= $i++; ?></td>
                 <td><?= $b['judul_buku']; ?></td>

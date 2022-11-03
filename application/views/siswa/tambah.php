@@ -37,7 +37,8 @@
                                         </div>
                                         <div>
                                         <div class="form-group">
-                                            <select name="agama" class="form-control form-control-user" >
+                                            <select id="agama" placeholder="Agama" name="agama" class="form-control form-control-user">
+                                            <?= form_error('agama','<small class="text-danger pl-3">', '</small>'); ?>
                                                 <option value="">Pilih Agama</option>
                                                 <option value="Islam">Islam</option>
                                                 <option value="Kristen">Kristen</option>
@@ -53,7 +54,8 @@
                                             <input type="radio" name="jnskel" value="Perempuan"> Perempuan</div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="reset" class="btn btn-warning">RESET</button>
+                                            <input type="button" class="btn btn-dark" value="Kembali" onclick="window.history.go(-1)">
+                                            <button type="reset" class="btn btn-danger"><i class="fas fa-ban"></i> RESET</button>
                                             <button type="submit" class="btn btn-primary"><i class="fas fa-plus-circle"></i> Tambah</button>
                                         </div>
                                         </form>
