@@ -23,7 +23,7 @@
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('admin'); ?>">
                     <i class="fa fa-fw fa book"></i>
-                    <span>Dashboard</span></a>
+                    <span class="fa fa-home" aria-hidden="true"> Dashboard</span></a>
             </li>
             </li>
 
@@ -40,22 +40,22 @@
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('buku/kategori'); ?>">
                     <i class="fa fa-fw fa book"></i>
-                    <span class=" fas fa-book text-white"> Kategori Buku</span></a>
+                    <span class=" fas fa-book"> Kategori Buku</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('buku'); ?>">
                     <i class="fa fa-fw fa book"></i>
-                    <span class=" fas fa-book text-white"> Data Buku</span></a>
+                    <span class=" fas fa-book"> Data Buku</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('user/anggota'); ?>">
                     <i class="fa fa-fw fa book"></i>
-                    <span class="fas fa-users text-white"> Data Anggota</span></a>
+                    <span class="fas fa-users"> Data Anggota</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('siswa'); ?>">
                     <i class="fa fa-fw fa book"></i>
-                    <span class="fas fa-users text-white"> Data Siswa</span></a>
+                    <span class="fas fa-users"> Data Siswa</span></a>
             </li>
             </li>
             <!-- Divider -->
@@ -81,10 +81,7 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider mt-3">
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+
 
 
             <!-- Heading -->
@@ -114,6 +111,6 @@
             <hr class="sidebar-divider mt-3">
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0 id=" sidebartoggle"></button>
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
         </ul>

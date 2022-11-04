@@ -4,15 +4,15 @@
   <!-- row ux-->
   <div class="row">
     <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-danger shadow h-100 py-2 bg-primary">
+      <div class="card border-left-danger shadow h-100 py-2 bg-gradient-light">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-md font-weight-bold text-white text-uppercase mb-1">Jumlah Anggota</div>
-              <div class="h1 mb-0 font-weight-bold text-white "><?= $this->ModelUser->getUserWhere(['role_id' => 1])->num_rows(); ?></div>
+              <div class="text-md font-weight-bold text-secondary text-uppercase mb-1">Jumlah Anggota</div>
+              <div class="h1 mb-0 font-weight-bold text-secondary "><?= $this->ModelUser->getUserWhere(['role_id' => 1])->num_rows(); ?></div>
             </div>
             <div class="col-auto">
-              <a href="<?= base_url('user/anggota'); ?>"><i class="fas fa-users fa-3x text-warning "></i></a>
+              <a href="<?= base_url('user/anggota'); ?>"><i class="fas fa-users fa-3x text-danger "></i></a>
             </div>
           </div>
         </div>
@@ -20,12 +20,12 @@
     </div>
 
     <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-primary shadow h-100 py-2 bg-warning">
+      <div class="card border-left-primary shadow h-100 py-2 bg-gradient-light">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-md font-weight-bold text-white text-uppercase mb-1">Stok Buku Terdaftar</div>
-              <div class="h1 mb-0 font-weight-bold text-white">
+              <div class="text-md font-weight-bold text-secondary text-uppercase mb-1">Stok Buku Terdaftar</div>
+              <div class="h1 mb-0 font-weight-bold text-secondary">
                 <?php
                 $where = ['stok != 0'];
                 $totalstok = $this->ModelBuku->total('stok', $where);
@@ -42,12 +42,12 @@
     </div>
 
     <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-success shadow h-100 py-2 bg-danger">
+      <div class="card border-left-success shadow h-100 py-2 bg-gradient-light">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-md font-weight-bold text-white text-uppercase mb-1">Buku yang dipinjam</div>
-              <div class="h1 mb-0 font-weight-bold text-white">
+              <div class="text-md font-weight-bold text-secondary text-uppercase mb-1">Buku yang dipinjam</div>
+              <div class="h1 mb-0 font-weight-bold text-secondary">
                 <?php
                 $where = ['dipinjam != 0'];
                 $totaldipinjam = $this->ModelBuku->total('dipinjam', $where);
@@ -64,12 +64,12 @@
     </div>
 
     <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-warning shadow h-100 py-2 bg-success">
+      <div class="card border-left-warning shadow h-100 py-2 bg-gradient-light">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-md font-weight-bold text-white text-uppercase mb-1">Buku yang dibooking</div>
-              <div class="h1 mb-0 font-weight-bold text-white">
+              <div class="text-md font-weight-bold text-secondary text-uppercase mb-1">Buku yang dibooking</div>
+              <div class="h1 mb-0 font-weight-bold text-secondary">
                 <?php
                 $where = ['dibooking !=0'];
                 $totaldibooking = $this->ModelBuku->total('dibooking', $where);
@@ -78,7 +78,7 @@
               </div>
             </div>
             <div class="col-auto">
-              <a href="<?= base_url('user'); ?>"><i class="fas fa-shopping-cart fa-3x text-danger"></i></a>
+              <a href="<?= base_url('user'); ?>"><i class="fas fa-shopping-cart fa-3x text-warning"></i></a>
             </div>
           </div>
         </div>
@@ -94,8 +94,8 @@
   <div class="row">
     <div class="table-responsive table-bordered col-sm-auto ml-auto mr-auto mt-2">
       <div class="page-header">
-        <span class="fas fa-users text-primary mt-2 "> Data User</span>
-        <a class="text-danger" href="<?php echo base_url('user/data_user'); ?>"><i class="fas fa-search mt-2 float-right"> Tampilkan</i></a>
+        <span class="fas fa-users text-warning mt-2 "> Data User</span>
+        <a class="text-success" href="<?php echo base_url('user/data_user'); ?>"><i class="fas fa-search mt-2 float-right"> Tampilkan</i></a>
       </div>
       <table class="table mt-3">
         <thead>
@@ -128,7 +128,7 @@
 
     <div class="table-responsive table-bordered col-sm-auto ml-auto mr-auto mt-2">
       <div class="page-header">
-        <span class="fas fa-book text-warning mt-2"> Data Buku</span>
+        <span class="fas fa-book text-danger mt-2"> Data Buku</span>
         <a href="<?= base_url('buku'); ?>"><i class="fas fa-search text-primary mt-2 float-right"> Tampilkan</i></a>
       </div>
       <div class="table-responsive">
