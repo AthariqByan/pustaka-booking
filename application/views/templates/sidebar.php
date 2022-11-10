@@ -70,12 +70,12 @@
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('pinjam'); ?>">
                     <i class="fa fa-fw fa book"></i>
-                    <span>Data Peminjaman</span></a>
+                    <span class="fas fa-shopping-cart"> Data Peminjaman</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('pinjam/daftarBooking'); ?>">
                     <i class="fa fa-fw fa book"></i>
-                    <span>Data Booking</span></a>
+                    <span class="fas fa-user-tag"> Data Booking</span></a>
             </li>
             </li>
 
@@ -94,17 +94,17 @@
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('Laporan/laporan_buku'); ?>">
                     <i class="fa fa-fw fa book"></i>
-                    <span>Laporan Data Buku</span></a>
+                    <span class=" fas fa-book"> Laporan Data Buku</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('Laporan/laporan_anggota'); ?>">
                     <i class="fa fa-fw fa book"></i>
-                    <span>Laporan Data Anggota</span></a>
+                    <span class="fas fa-users"> Laporan Data Anggota</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('Laporan/laporan_pinjam'); ?>">
                     <i class="fa fa-fw fa book"></i>
-                    <span>Laporan Peminjaman</span></a>
+                    <span class="fas fa-shopping-cart"> Laporan Peminjaman</span></a>
             </li>
             </li>
             <!-- Divider -->
