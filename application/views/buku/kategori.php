@@ -3,16 +3,16 @@
 
     <?= $this->session->flashdata('pesan'); ?>
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-5">
             <?php if (validation_errors()) { ?>
                 <div class="alert alert-danger" role="alert">
                     <?= validation_errors(); ?>
                 </div>
             <?php } ?>
             <?= $this->session->flashdata('pesan'); ?>
-            <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#kategoriBaruModal"><i class="fas fa-file-alt"></i> Tambah Kategori</a>
+            <a href="" class="btn btn-primary mb-4" data-toggle="modal" data-target="#kategoriBaruModal"><i class="fas fa-file-alt"></i> Tambah Kategori</a>
             <table class="table table-hover">
-                <thead>
+                <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Kategori</th>

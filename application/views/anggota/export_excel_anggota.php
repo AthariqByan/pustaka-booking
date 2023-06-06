@@ -1,78 +1,77 @@
-<?php  
+<?php
 
-  header ("Cache-Control: no-cache, must-revalidate");
+header("Cache-Control: no-cache, must-revalidate");
 
-    header ("Pragma: no-cache");
+header("Pragma: no-cache");
 
-    header ("Content-type: application/x-msexcel");
+header("Content-type: application/x-msexcel");
 
-    header ("Content-type: application/octet-stream");
+header("Content-type: application/octet-stream");
 
-    header ("Content-Disposition: attachment; filename=Nama_File.xls");
+header("Content-Disposition: attachment; filename=Nama_File.xls");
 
 ?>
 
 
 
-<h3><center>Laporan Data Anggota Perputakaan Online</center></h3> 
+<h3>
+	<center>Laporan Data Anggota Perputakaan Online</center>
+</h3>
 
-<br/> 
+<br />
 
-<table class="table-data"> 
+<table class="table-data">
 
-	<thead> 
+	<thead>
 
-		<tr> 
+		<tr>
 
-			<th>No</th> 
+			<th>No</th>
 
-			<th>Nama</th> 
+			<th>Nama</th>
 
-			<th>Email</th> 
+			<th>Email</th>
 
 			<th>Member Sejak</th>
 
-		</tr> 
+		</tr>
 
-	</thead> 
+	</thead>
 
-	<tbody> 
+	<tbody>
 
-		<?php 
+		<?php
 
-		$no = 1; 
+		$no = 1;
 
-		foreach($buku as $b)
+		foreach ($buku as $b) {
 
-		{ 
+		?>
 
-			?> 
+			<tr>
 
-			<tr> 
+				<th scope="row"><?= $no++; ?></th>
 
-				<th scope="row"><?= $no++; ?></th> 
+				<td><?= $b['judul_buku']; ?></td>
 
-				<td><?= $b['judul_buku']; ?></td> 
+				<td><?= $b['pengarang']; ?></td>
 
-				<td><?= $b['pengarang']; ?></td> 
+				<td><?= $b['penerbit']; ?></td>
 
-				<td><?= $b['penerbit']; ?></td> 
+				<td><?= $b['tahun_terbit']; ?></td>
 
-				<td><?= $b['tahun_terbit']; ?></td> 
+				<td><?= $b['isbn']; ?></td>
 
-				<td><?= $b['isbn']; ?></td> 
+				<td><?= $b['stok']; ?></td>
 
-				<td><?= $b['stok']; ?></td> 
+			</tr>
 
-			</tr> 
+		<?php
 
-			<?php 
+		}
 
-		} 
+		?>
 
-		?> 
+	</tbody>
 
-	</tbody> 
-
-</table> 
-
+</table>

@@ -40,9 +40,7 @@
                         </a>
                     </form>
                     <hr>
-                    <div class="text-center">
-                        <a class="small" href="<?= base_url('autentifikasi/lupa-password'); ?>">Lupa Password?</a>
-                    </div>
+                    
                     <div class="text-center">
                         <a class="small" href="<?= base_url('autentifikasi'); ?>"> Sudah Punya Akun ? Login!</a>
                     </div>

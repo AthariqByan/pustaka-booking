@@ -41,7 +41,7 @@
                                         <a href="<?
                                                     ?>" class="badge badge-info"><i class="fas fa-edit"></i> Ubah</a>
                                         <a href="<?
-                                                    ?>" onclick="return confirm('Kamu yakin akan menghapus <?= $judul . ' ' . $a['judul_buku']; ?> ?');" class="badge badge-danger"><i class="fas fa-trash"></i> Hapus</a>
+                                                    ?>" onclick="return confirm('Kamu yakin akan menghapus <?= $judul . ' ' . $b['judul_buku']; ?> ?');" class="badge badge-danger"><i class="fas fa-trash"></i> Hapus</a>
                                     </td> -->
                         </tr>
                     <?php } ?>

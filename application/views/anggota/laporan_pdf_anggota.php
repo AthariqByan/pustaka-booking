@@ -1,121 +1,113 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 
 
-<html> 
+<html>
 
-<head> 
+<head>
 
-	<title></title> 
+	<title></title>
 
-</head> 
+</head>
 
-<body> 
+<body>
 
-	<style type="text/css"> 
+	<style type="text/css">
+		.table-data {
 
-	.table-data{ 
+			width: 100%;
 
-width: 100%; 
+			border-collapse: collapse;
 
-border-collapse: collapse; 
+		}
 
-} 
+		.table-data tr th,
 
-.table-data tr th, 
+		.table-data tr td {
 
-.table-data tr td
+			border: 1px solid black;
 
-{ 
+			font-size: 11pt;
 
-border:1px solid black; 
+			font-family: Verdana;
 
-font-size: 11pt; 
+			padding: 10px 10px 10px 10px;
 
-font-family:Verdana; 
+		}
 
-padding: 10px 10px 10px 10px; 
+		h3 {
 
-} 
+			font-family: Verdana;
 
-h3
+		}
+	</style>
 
-{ 
+	<h3>
+		<center>Laporan Data Member Perputakaan Online</center>
+	</h3>
 
-font-family:Verdana;
+	<br />
 
- } 
+	<table class="table-data">
 
-</style> 
+		<thead>
 
-<h3><center>Laporan Data Member Perputakaan Online</center></h3> 
+			<tr>
 
-<br/> 
+				<th>No</th>
 
-<table class="table-data"> 
+				<th>Nama</th>
 
-	<thead> 
+				<th>Email</th>
 
-		<tr> 
+				<th>Member Sejak</th>
 
-			<th>No</th> 
+			</tr>
 
-			<th>Nama</th> 
+		</thead>
 
-			<th>Email</th> 
+		<tbody>
 
-			<th>Member Sejak</th>
+			<?php
 
-		</tr> 
+			$no = 1;
 
-	</thead> 
+			foreach ($buku as $b) {
 
-	<tbody> 
+			?>
 
-		<?php 
+				<tr>
 
-		$no = 1; 
+					<th scope="row"><?= $no++; ?></th>
 
-		foreach($buku as $b)
+					<td><?= $b['judul_buku']; ?></td>
 
-		{ 
+					<td><?= $b['pengarang']; ?></td>
 
-			?> 
+					<td><?= $b['penerbit']; ?></td>
 
-			<tr> 
+					<td><?= $b['tahun_terbit']; ?></td>
 
-				<th scope="row"><?= $no++; ?></th> 
+					<td><?= $b['isbn']; ?></td>
 
-				<td><?= $b['judul_buku']; ?></td> 
+					<td><?= $b['stok']; ?></td>
 
-				<td><?= $b['pengarang']; ?></td> 
+				</tr>
 
-				<td><?= $b['penerbit']; ?></td> 
+			<?php
 
-				<td><?= $b['tahun_terbit']; ?></td> 
+			}
 
-				<td><?= $b['isbn']; ?></td> 
+			?>
 
-				<td><?= $b['stok']; ?></td> 
+		</tbody>
 
-			</tr> 
+	</table>
 
-			<?php 
+	<script type="text/javascript">
+		window.print();
+	</script>
 
-		} 
-
-		?> 
-
-	</tbody> 
-
-</table> 
-
-<script type="text/javascript"> 
-
-window.print();
-
-</script> 
-
-</body> 
+</body>
 
 </html>

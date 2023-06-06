@@ -4,15 +4,15 @@
   <!-- row ux-->
   <div class="row">
     <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-danger shadow h-100 py-2 bg-gradient-light">
+      <div class="card border-left-info shadow h-100 py-2 ">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-md font-weight-bold text-danger text-uppercase mb-1">Jumlah Anggota</div>
+              <div class="text-md font-weight-bold text-info text-uppercase mb-1">Jumlah Anggota</div>
               <div class="h1 mb-0 font-weight-bold text-dark"><?= $this->ModelUser->getUserWhere(['role_id' => 1])->num_rows(); ?></div>
             </div>
             <div class="col-auto">
-              <a href="<?= base_url('user/anggota'); ?>"><i class="fas fa-users fa-3x text-danger "></i></a>
+              <a href="<?= base_url('user/anggota'); ?>"><i class="fas fa-users fa-3x text-gray-300 "></i></a>
             </div>
           </div>
         </div>
@@ -20,7 +20,7 @@
     </div>
 
     <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-primary shadow h-100 py-2 bg-gradient-light">
+      <div class="card border-left-primary shadow h-100 py-2">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
@@ -34,7 +34,7 @@
               </div>
             </div>
             <div class="col-auto">
-              <a href="<?= base_url('buku'); ?>"><i class="fas fa-book fa-3x text-primary"></i></a>
+              <a href="<?= base_url('buku'); ?>"><i class="fas fa-book fa-3x text-gray-300"></i></a>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@
     </div>
 
     <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-success shadow h-100 py-2 bg-gradient-light">
+      <div class="card border-left-success shadow h-100 py-2 ">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
@@ -56,7 +56,7 @@
               </div>
             </div>
             <div class="col-auto">
-              <a href="<?= base_url('user'); ?>"><i class="fas fa-user-tag fa-3x text-success"></i></a>
+              <a href="<?= base_url('pinjam'); ?>"><i class="fas fa-user-tag fa-3x  text-gray-300"></i></a>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
     </div>
 
     <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-warning shadow h-100 py-2 bg-gradient-light">
+      <div class="card border-left-warning shadow h-100 py-2 ">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
@@ -78,7 +78,7 @@
               </div>
             </div>
             <div class="col-auto">
-              <a href="<?= base_url('user'); ?>"><i class="fas fa-shopping-cart fa-3x text-warning"></i></a>
+              <a href="<?= base_url('pinjam/daftarBooking'); ?>"><i class="fas fa-shopping-cart fa-3x  text-gray-300"></i></a>
             </div>
           </div>
         </div>
@@ -88,52 +88,96 @@
   <!-- end row ux-->
 
   <!-- Divider -->
-  <hr class="sidebar-divider">
+
 
   <!-- row table-->
   <div class="row">
-    <div class="table-responsive table-bordered col-sm-auto ml-auto mr-auto mt-2">
-      <div class="page-header">
-        <span class="fas fa-users text-warning mt-2 "> Data User</span>
-        <a class="text-success" href="<?php echo base_url('user/data_user'); ?>"><i class="fas fa-search mt-2 float-right"> Tampilkan</i></a>
-      </div>
-      <table class="table mt-3">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Nama Anggota</th>
-            <th>Email</th>
-            <th>Role ID</th>
-            <th>Aktif</th>
-            <th>Member Sejak</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-          $i = 1;
-          foreach ($anggota as $a) { ?>
-            <tr>
-              <td><?= $i++; ?></td>
-              <td><?= $a['nama']; ?></td>
-              <td><?= $a['email']; ?></td>
-              <td><?= $a['role_id']; ?></td>
-              <td><?= $a['is_active']; ?></td>
-              <td><?= date('Y', $a['tanggal_input']); ?></td>
+    <div class="responsive col-xl-7 col-lg-6 col-sm-auto ml-auto mr-auto mt-auto">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">Data User</h1>
+            <a href="<?php echo base_url('user/anggota'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-search fa-sm text-white-50"></i> Tampilkan</a>
+        </div>
+        <table class="table table-striped table-responsive table-hover">
+          <thead>
+            <tr class="table-danger">
+              <th>#</th>
+              <th>Nama Anggota</th>
+              <th>Email</th>
+              <th>Role ID</th>
+              <th>Aktif</th>
+              <th>Member Sejak</th>
             </tr>
-          <?php } ?>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            <?php
+            $i = 1;
+            foreach ($anggota as $a) { ?>
+              <tr>
+                <td><?= $i++; ?></td>
+                <td><?= $a['nama']; ?></td>
+                <td><?= $a['email']; ?></td>
+                <td><?= $a['role_id']; ?></td>
+                <td><?= $a['is_active']; ?></td>
+                <td><?= date('Y', $a['tanggal_input']); ?></td>
+              </tr>
+            <?php } ?>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-
-    <div class="table-responsive table-bordered col-sm-auto ml-auto mr-auto mt-2">
-      <div class="page-header">
-        <span class="fas fa-book text-danger mt-2"> Data Buku</span>
-        <a href="<?= base_url('buku'); ?>"><i class="fas fa-search text-primary mt-2 float-right"> Tampilkan</i></a>
+    <!-- row table 2-->
+    <div class="col-sm-auto ml-auto mr-auto mt-2">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">Data Siswa</h1>
+            <a href="<?php echo base_url('siswa'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-search fa-sm text-white-50"></i> Tampilkan</a>
+        </div>
+        <table class="table table-striped table-responsive table-hover">
+          <thead class="table-warning">
+            <tr>
+              <th>#</th>
+              <th>Nama</th>
+              <th>NIS</th>
+              <th>Kelas</th>
+              <th>Tanggal Lahir</th>
+              <th>Tempat Lahir</th>
+              <th>Alamat</th>
+              <th>Jenis Kelamin</th>
+              <th>Agama</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            $i = 1;
+            foreach ($siswa as $sis) { ?>
+              <tr>
+                <td><?= $i++; ?></td>
+                <td><?= $sis['nama']; ?></td>
+                <td><?= $sis['nis']; ?></td>
+                <td><?= $sis['kelas']; ?></td>
+                <td><?= $sis['tgllahir']; ?></td>
+                <td><?= $sis['tmplahir']; ?></td>
+                <td><?= $sis['alamat']; ?></td>
+                <td><?= $sis['jnskel']; ?></td>
+                <td><?= $sis['agama']; ?></td>
+                <td>
+                <?php } ?>
+          </tbody>
+        </table>
       </div>
-      <div class="table-responsive">
-        <table class="table mt-3" id="table-datatable">
-          <thead>
+    </div>
+
+    <!-- row table 3-->
+    <div class="responsive col-sm-auto ml-auto mr-auto mt-auto">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">Data Buku</h1>
+            <a href="<?php echo base_url('buku'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-search fa-sm text-white-50"></i> Tampilkan</a>
+        </div>
+        <table class="table table-striped table-responsive table-hover" id="table-datatable">
+          <thead class="table-success">
             <tr>
               <th>#</th>
               <th>Judul Buku</th>

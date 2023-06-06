@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `booking` (
-  `id_booking` varchar(12) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
+  `id_booking` varchar(12) NOT NULL,
   `tgl_booking` date NOT NULL,
   `batas_ambil` date NOT NULL,
   `id_user` int(11) NOT NULL
